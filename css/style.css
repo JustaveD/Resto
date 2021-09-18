@@ -29,6 +29,27 @@ html {
     scroll-behavior: smooth;
 }
 
+section{
+    padding: 2rem 9%;
+}
+section:nth-child(even){
+    background-color: #eee;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    color:#fff;
+    background-color: var(--black);
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+.btn:hover{
+    background-color: var(--green);
+    letter-spacing: .1rem;
+}
 
 /* Header */
 header{
@@ -141,8 +162,44 @@ header .icons #menu-bars{
     cursor: pointer;
 }
 
+/* HOME */
 
+.home .home-silder .slide{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 9rem;
+}
 
+.home .home-silder .slide .content{
+    flex: 1 1 45rem;
+}
+.home .home-silder .slide .image{
+    flex: 1 1 45rem;
+}
+.home .home-silder .slide .image img{
+    width: 100%;
+}
+
+.home .home-silder .slide .content span{
+    color: var(--green);
+    font-size: 2.5rem;
+}
+.home .home-silder .slide .content h3{
+    color: var(--black);
+    font-size: 7rem;
+}
+.home .home-silder .slide .content p{
+    color: var(--light-color);
+    font-size: 2.2rem;
+    padding: .5rem 0;
+    line-height: 1.5;
+}
+
+.swiper-pagination-bullet-active{
+    background:var(--green);
+}
 
 
 
@@ -201,6 +258,9 @@ header .icons #menu-bars{
     header{
         padding: 1rem 2rem;
     }
+    section{
+        padding: 2rem;
+    }
 }
 @media (max-width:768px){
     header .icons #menu-bars{
@@ -232,6 +292,10 @@ header .icons #menu-bars{
     #search-form #search-box{
         width: 90%;
         margin: 0 1rem;
+    }
+    .home .home-silder .slide .content h3{
+        
+        font-size: 5rem;
     }
 }
 

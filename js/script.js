@@ -21,3 +21,18 @@ searchIcon.onclick = () =>{
 searchClose.onclick = () =>{
   searchForm.classList.remove('active');
 }
+
+// Slide use SWIPER
+var swiper = new Swiper(".home-silder", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 7500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  loop: true,
+});
