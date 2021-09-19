@@ -22,7 +22,7 @@ searchClose.onclick = () =>{
   searchForm.classList.remove('active');
 }
 
-// Slide use SWIPER
+// Slide use SWIPER for home
 var swiper = new Swiper(".home-silder", {
   spaceBetween: 30,
   centeredSlides: true,
@@ -35,4 +35,15 @@ var swiper = new Swiper(".home-silder", {
     clickable: true,
   },
   loop: true,
+});
+// Slide use SWIPER for REVIEW
+var swiper = new Swiper(".review-slider", {
+  
+  spaceBetween: 20,
+  centeredSlides: true,
+  autoplay: {
+    delay: 7500,
+    disableOnInteraction: false,
+  },
+  loop:true,
 });
