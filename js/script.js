@@ -6,10 +6,30 @@ menu.onclick = ()=>{
   menu.classList.toggle('fa-times');
   navbar.classList.toggle('active');
 }
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header .navbar a');
 window.onscroll = ()=>{
   menu.classList.remove('fa-times');
   navbar.classList.remove('active');
+  
+// Impaction of the current section with nav link
+  sections.forEach(section=>{
+
+    let scrollValue = window.scrollY;
+    let distanceFromTopToThisSection = section.offsetTop -150;
+    let heightOfSection = section.offsetHeight;
+
+    let id=section.getAttribute("id");
+    
+    if(scrollValue >= distanceFromTopToThisSection && scrollValue < distanceFromTopToThisSection + heightOfSection){
+      navLinks.forEach(links=>{
+        links.classList.remove('active');
+      })
+      document.querySelector(`header .navbar a[href='#${id}']`).classList.add('active');
+    }
+  })
 }
+
 
 // Search form apperence animation
 let searchIcon = document.querySelector('#search-icon');
@@ -47,3 +67,12 @@ var swiper = new Swiper(".review-slider", {
   },
   loop:true,
 });
+
+// Loader fade out
+const fadeOutLoader = ()=>{
+  document.querySelector('.loader-container').classList.add('fade-out');
+}
+const finishLoader = () =>{
+  setTimeout(fadeOutLoader,3000);
+}
+window.onload = finishLoader;
