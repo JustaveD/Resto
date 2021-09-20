@@ -40,10 +40,15 @@
     font-weight: bold;
     margin:1rem 0;
 }
+.change-value{
+    display: flex;
+    align-items: center;
+}
 .infomation .box-container .info .quantity{
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
+    flex-wrap: wrap;
 }
 .infomation .box-container .info .quantity span{
     font-size: 2rem;
@@ -72,6 +77,61 @@
 }
 
 
+/* YOU MAYBE LIKE SECTION */
+.maybelike .box-container{
+    padding: 0 10%;
+}
+.maybelike .box-container .box{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--box-shadow);
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+}
+
+.maybelike .box-container .box .image{
+    flex: 1 1 10rem;
+}
+.maybelike .box-container .box .image img{
+    width: 100%;
+    object-fit: cover;
+}
+.maybelike .box-container .box .info{
+    flex: 1 1 30rem;
+    display: flex;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.maybelike .box-container .box .info a{
+    flex: 1 1 10rem;
+    font-size: 3rem;
+    margin-right: 2rem;
+    color: var(--black);
+    font-weight: bold;
+}
+.maybelike .box-container .box .info .price{
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin-right: 1rem;
+    
+}
+.maybelike .box-container .box .info .price .old-price{
+    color:var(--light-color);
+    text-decoration: line-through;
+    font-size: 1.8rem;
+}
+.maybelike .box-container .box .info .price .new-price{
+    color:var(--green);
+    font-size: 2.5rem;
+}
 
 
 
@@ -112,6 +172,12 @@
         padding: 1rem 0;
         box-shadow: var(--box-shadow);
     }
+    .maybelike .box-container{
+        padding: 0 2%;
+    }
+    .maybelike .box-container .box{
+        padding: 1rem 1rem;
+    }
 }
 @media (max-width: 425px){
     html {
@@ -119,6 +185,10 @@
     }
     .infomation{
         padding-top: 15rem;
+    }
+    .maybelike .box-container .box .info .calculator{
+        flex: 1 1 5rem;
+        margin-top: 1rem;
     }
 }
 
