@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="./css/variable.css">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/header2.css">
+    <link rel="stylesheet" href="./css/detail.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <title>Detail </title>
+</head>
+<body>
+     <!-- header section start     -->
+     <header>
+        <a href="#" class="logo"><i class="fas fa-utensils"></i>resto.</a>
+        <nav class="navbar">
+            <a href="#"><i class="fas fa-undo"></i>Back to home</a>
+            <a href="#" class="active">Food's infomation</a>
+           
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-shopping-cart"></a>
+        </div>
+    </header>
+    <!-- header section end     -->
+    <!-- search form section start -->
+    <form action="" id='search-form'>
+        <input type="search" name="" placeholder='search here'id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
+    <!-- search form section  end-->
+
+    <section class="infomation">
+        <div class="box-container">
+            <div class="image">
+                <img src="./images/dish-1.png" alt="">
+            </div>
+            <div class="info">
+                <h2>Hambergur Big Z</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque repudiandae vero unde!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">$5.99</div>
+                <div class="quantity">
+                    <span>quantity</span>
+                    <div class="calculator" id='minus'>-</div>
+                    <input type="number" >
+                    <div class="calculator" id='add'>+</div>
+                </div>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- custom js file link -->
+    <script src="./js/search.js"></script>
+    <script src="./js/addAndMinus.js"></script>
+</body>
+</html>
